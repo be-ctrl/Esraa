@@ -1,4 +1,7 @@
-<html><head><base href="https://elegant-birthday-countdown.com">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <base href="https://elegant-birthday-countdown.com">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عد تنازلي أنيق لعيد الميلاد</title>
@@ -7,12 +10,10 @@
     <style>
         body {
             font-family: 'Noto Kufi Arabic', sans-serif;
-            direction: rtl;
-            background-color: #f0f4f8;
         }
         .card {
-            background: linear-gradient(145deg, #ffffff, #e6e9ee);
-            box-shadow: 20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .progress-ring {
             transition: stroke-dashoffset 0.35s;
@@ -26,63 +27,54 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
             justify-content: center;
             align-items: center;
-            text-align: center;
-            color: white;
-            font-size: 24px;
-            padding: 20px;
-            animation: fadeIn 1s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            z-index: 1000;
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+<body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-pink-100 to-white">
     <div class="card rounded-3xl p-8 max-w-md w-full">
-        <h1 class="text-3xl font-bold text-center text-indigo-800 mb-6 leading-relaxed">عد تنازلي لعيد ميلاد<br>اسراء اسامة</h1>
+        <h1 class="text-3xl font-bold text-center text-pink-600 mb-6 leading-relaxed">عد تنازلي لعيد ميلاد<br>اسراء اسامة</h1>
         
         <div class="space-y-4 mb-8">
             <div class="flex justify-between items-center">
-                <p class="text-sm text-indigo-600 font-semibold">تاريخ الميلاد:</p>
+                <p class="text-sm text-pink-500 font-semibold">تاريخ الميلاد:</p>
                 <p class="text-sm text-gray-600">19 تشرين الأول 2001</p>
             </div>
             <div class="flex justify-between items-center">
-                <p class="text-sm text-indigo-600 font-semibold">شهر الميلاد:</p>
+                <p class="text-sm text-pink-500 font-semibold">شهر الميلاد:</p>
                 <p class="text-sm text-gray-600">تشرين الأول - أكتوبر</p>
             </div>
             <div class="flex justify-between items-center">
-                <p class="text-sm text-indigo-600 font-semibold">العمر:</p>
+                <p class="text-sm text-pink-500 font-semibold">العمر:</p>
                 <p id="currentAge" class="text-sm text-gray-600"></p>
             </div>
         </div>
         
         <div class="relative">
             <svg class="w-full h-64" viewBox="0 0 100 100">
-                <circle class="text-gray-200" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50"/>
-                <circle class="progress-ring text-indigo-500" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" stroke-dasharray="283" stroke-dashoffset="283"/>
+                <circle class="text-pink-100" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50"/>
+                <circle class="progress-ring text-pink-400" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" stroke-dasharray="283" stroke-dashoffset="283"/>
             </svg>
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                <p class="text-xl font-bold text-indigo-800 mb-2">باقي لعيد الميلاد القادم</p>
+                <p class="text-xl font-bold text-pink-600 mb-2">باقي لعيد الميلاد القادم</p>
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <span id="days" class="text-3xl font-bold text-indigo-600">00</span>
+                        <span id="days" class="text-3xl font-bold text-pink-500">00</span>
                         <p class="text-xs text-gray-500">يوم</p>
                     </div>
                     <div>
-                        <span id="hours" class="text-3xl font-bold text-indigo-600">00</span>
+                        <span id="hours" class="text-3xl font-bold text-pink-500">00</span>
                         <p class="text-xs text-gray-500">ساعة</p>
                     </div>
                     <div>
-                        <span id="minutes" class="text-3xl font-bold text-indigo-600">00</span>
+                        <span id="minutes" class="text-3xl font-bold text-pink-500">00</span>
                         <p class="text-xs text-gray-500">دقيقة</p>
                     </div>
                     <div>
-                        <span id="seconds" class="text-3xl font-bold text-indigo-600">00</span>
+                        <span id="seconds" class="text-3xl font-bold text-pink-500">00</span>
                         <p class="text-xs text-gray-500">ثانية</p>
                     </div>
                 </div>
@@ -91,15 +83,15 @@
         
         <div class="mt-8 text-center">
             <p class="text-sm text-gray-600">سيكون عيد الميلاد يوم</p>
-            <p class="text-lg font-bold text-indigo-800">السبت الموافق 19 تشرين الأول</p>
+            <p class="text-lg font-bold text-pink-600">السبت الموافق 19 تشرين الأول</p>
         </div>
     </div>
 
     <div id="birthdayMessage" class="birthday-message">
         <div class="bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-4xl font-bold text-indigo-800 mb-4">عيد ميلاد سعيد اسراء!</h2>
+            <h2 class="text-4xl font-bold text-pink-600 mb-4">عيد ميلاد سعيد اسراء!</h2>
             <p class="text-xl text-gray-700 mb-6">في هذا اليوم المميز، نتمنى لكِ عاماً مليئاً بالفرح والنجاح والحب.</p>
-            <p class="text-lg text-indigo-600">أنتِ شعاع من النور يضيء حياة من حولك. استمري في التألق والإبداع!</p>
+            <p class="text-lg text-pink-500">أنتِ شعاع من النور يضيء حياة من حولك. استمري في التألق والإبداع!</p>
         </div>
     </div>
 
@@ -158,4 +150,5 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
-</body></html>
+</body>
+</html>
