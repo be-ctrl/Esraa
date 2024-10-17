@@ -1,154 +1,137 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <base href="https://elegant-birthday-countdown.com">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عد تنازلي أنيق لعيد الميلاد</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Noto Kufi Arabic', sans-serif;
-        }
-        .card {
-            background-color: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .progress-ring {
-            transition: stroke-dashoffset 0.35s;
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-        }
-        .birthday-message {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-    </style>
+    <title>Happy Birthday Esraa!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-pink-100 to-white">
-    <div class="card rounded-3xl p-8 max-w-md w-full">
-        <h1 class="text-3xl font-bold text-center text-pink-600 mb-6 leading-relaxed">عد تنازلي لعيد ميلاد<br>اسراء اسامة</h1>
-        
-        <div class="space-y-4 mb-8">
-            <div class="flex justify-between items-center">
-                <p class="text-sm text-pink-500 font-semibold">تاريخ الميلاد:</p>
-                <p class="text-sm text-gray-600">19 تشرين الأول 2001</p>
+<body class="min-h-screen bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 flex items-center justify-center p-4">
+    <div class="max-w-2xl w-full bg-white rounded-lg shadow-2xl overflow-hidden" id="container">
+        <div class="p-8 text-center">
+            <h1 class="text-4xl font-bold text-purple-600 mb-4" id="title">عيد ميلاد سعيد يا إسراء أسامة!</h1>
+            <div class="w-48 h-48 mx-auto mb-6 rounded-full shadow-lg overflow-hidden" id="image-container">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20241017_153330_573-ww3AI2I1EM9GTDxdUM2w13jBwJQyDG.jpg" alt="Esraa's Portrait" class="w-full h-full object-cover" id="image">
             </div>
-            <div class="flex justify-between items-center">
-                <p class="text-sm text-pink-500 font-semibold">شهر الميلاد:</p>
-                <p class="text-sm text-gray-600">تشرين الأول - أكتوبر</p>
-            </div>
-            <div class="flex justify-between items-center">
-                <p class="text-sm text-pink-500 font-semibold">العمر:</p>
-                <p id="currentAge" class="text-sm text-gray-600"></p>
-            </div>
-        </div>
-        
-        <div class="relative">
-            <svg class="w-full h-64" viewBox="0 0 100 100">
-                <circle class="text-pink-100" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50"/>
-                <circle class="progress-ring text-pink-400" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" stroke-dasharray="283" stroke-dashoffset="283"/>
-            </svg>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                <p class="text-xl font-bold text-pink-600 mb-2">باقي لعيد الميلاد القادم</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <span id="days" class="text-3xl font-bold text-pink-500">00</span>
-                        <p class="text-xs text-gray-500">يوم</p>
-                    </div>
-                    <div>
-                        <span id="hours" class="text-3xl font-bold text-pink-500">00</span>
-                        <p class="text-xs text-gray-500">ساعة</p>
-                    </div>
-                    <div>
-                        <span id="minutes" class="text-3xl font-bold text-pink-500">00</span>
-                        <p class="text-xs text-gray-500">دقيقة</p>
-                    </div>
-                    <div>
-                        <span id="seconds" class="text-3xl font-bold text-pink-500">00</span>
-                        <p class="text-xs text-gray-500">ثانية</p>
-                    </div>
-                </div>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed" id="message">
+                في هذا اليوم المميز، نحتفل بوجودك في حياتنا يا إسراء. أنتِ نور يضيء أيامنا وابتسامة تملأ قلوبنا بالفرح. جمالك الداخلي ينعكس في عينيكِ اللتين تشعان بالحياة والأمل. كل عام وأنتِ بألف خير، مليئة بالحب والسعادة والنجاح. أتمنى لكِ عامًا مليئًا بالإنجازات والذكريات الجميلة.
+            </p>
+            <div class="flex justify-center space-x-4" id="emojis">
+                <span class="text-4xl" id="emoji1">🎉</span>
+                <span class="text-4xl" id="emoji2">🎂</span>
+                <span class="text-4xl" id="emoji3">🎁</span>
+                <span class="text-4xl" id="emoji4">🎈</span>
             </div>
         </div>
-        
-        <div class="mt-8 text-center">
-            <p class="text-sm text-gray-600">سيكون عيد الميلاد يوم</p>
-            <p class="text-lg font-bold text-pink-600">السبت الموافق 19 تشرين الأول</p>
+        <div class="bg-purple-100 p-6 text-center" id="footer">
+            <p class="text-purple-600 font-semibold">نتمنى لكِ يومًا رائعًا مليئًا بالحب والفرح، يا إسراء!</p>
         </div>
     </div>
 
-    <div id="birthdayMessage" class="birthday-message">
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-4xl font-bold text-pink-600 mb-4">عيد ميلاد سعيد اسراء!</h2>
-            <p class="text-xl text-gray-700 mb-6">في هذا اليوم المميز، نتمنى لكِ عاماً مليئاً بالفرح والنجاح والحب.</p>
-            <p class="text-lg text-pink-500">أنتِ شعاع من النور يضيء حياة من حولك. استمري في التألق والإبداع!</p>
-        </div>
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/canvas-confetti.min.js"></script>
     <script>
-        const birthDate = new Date('2001-10-19T00:00:00+03:00');
-        const nextBirthday = new Date('2024-10-19T00:00:00+03:00');
-        const today = new Date();
-        const lastBirthday = new Date(today.getFullYear(), 9, 19);
-        if (lastBirthday > today) {
-            lastBirthday.setFullYear(lastBirthday.getFullYear() - 1);
-        }
+        // Confetti
+        window.onload = () => {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            })
+        };
 
-        const totalDuration = nextBirthday - lastBirthday;
+        // Animations
+        anime({
+            targets: '#container',
+            opacity: [0, 1],
+            scale: [0.5, 1],
+            duration: 500,
+            easing: 'easeInOutExpo'
+        });
 
-        function updateCountdown() {
-            const now = new Date();
-            const difference = nextBirthday - now;
+        anime({
+            targets: '#title',
+            translateY: [50, 0],
+            duration: 500,
+            delay: 200,
+            easing: 'spring(1, 80, 10, 0)'
+        });
 
-            // Calculate current age
-            let age = now.getFullYear() - birthDate.getFullYear();
-            const m = now.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && now.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            const monthDiff = (now.getMonth() + 12 - birthDate.getMonth()) % 12;
-            const dayDiff = now.getDate() - birthDate.getDate();
+        anime({
+            targets: '#image-container',
+            rotate: [180, 0],
+            opacity: [0, 1],
+            duration: 800,
+            delay: 500,
+            easing: 'easeInOutExpo'
+        });
 
-            document.getElementById('currentAge').textContent = `${age} سنة و ${monthDiff} شهر و ${dayDiff} يوم`;
+        anime({
+            targets: '#message',
+            opacity: [0, 1],
+            duration: 1000,
+            delay: 1000,
+            easing: 'easeInOutExpo'
+        });
 
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        anime({
+            targets: '#emojis',
+            translateY: [50, 0],
+            opacity: [0, 1],
+            duration: 500,
+            delay: 1500,
+            easing: 'easeInOutExpo'
+        });
 
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        // Emoji Animations - Adjusted timing for smoother visual effect
+        anime({
+            targets: '#emoji1',
+            translateY: [0, -20, 0],
+            duration: 1000,
+            loop: true,
+            direction: 'alternate',
+            easing: 'easeInOutExpo',
+            delay: 2000 // Added delay for smooth transition from other animations
+        });
 
-            // Update progress ring
-            const elapsed = now - lastBirthday;
-            const progress = (elapsed / totalDuration);
-            const circumference = 2 * Math.PI * 45;
-            const offset = circumference - (progress * circumference);
-            document.querySelector('.progress-ring').style.strokeDashoffset = offset;
+        anime({
+            targets: '#emoji2',
+            translateY: [0, -20, 0],
+            duration: 1000,
+            loop: true,
+            direction: 'alternate',
+            easing: 'easeInOutExpo',
+            delay: 2200
+        });
 
-            // Check if it's the birthday
-            if (now.getDate() === nextBirthday.getDate() && 
-                now.getMonth() === nextBirthday.getMonth() && 
-                now.getHours() === 12 && 
-                now.getMinutes() === 0) {
-                document.getElementById('birthdayMessage').style.display = 'flex';
-            }
-        }
+        anime({
+            targets: '#emoji3',
+            translateY: [0, -20, 0],
+            duration: 1000,
+            loop: true,
+            direction: 'alternate',
+            easing: 'easeInOutExpo',
+            delay: 2400
+        });
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        anime({
+            targets: '#emoji4',
+            translateY: [0, -20, 0],
+            duration: 1000,
+            loop: true,
+            direction: 'alternate',
+            easing: 'easeInOutExpo',
+            delay: 2600
+        });
+
+        anime({
+            targets: '#footer',
+            translateY: [50, 0],
+            opacity: [0, 1],
+            duration: 500,
+            delay: 2800, // Increased delay for footer to appear after emojis are bouncing
+            easing: 'easeInOutExpo'
+        });
     </script>
 </body>
 </html>
